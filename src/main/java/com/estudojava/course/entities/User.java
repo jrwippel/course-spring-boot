@@ -1,5 +1,6 @@
 package com.estudojava.course.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.boot.autoconfigure.web.WebProperties;
 
 import javax.persistence.*;
@@ -22,6 +23,7 @@ public class User implements Serializable {
 
 
 
+    @JsonIgnore
     @OneToMany(mappedBy = "client")
     private List<Order> orders = new ArrayList<>();
 
