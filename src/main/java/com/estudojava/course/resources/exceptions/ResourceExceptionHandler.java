@@ -1,6 +1,7 @@
 package com.estudojava.course.resources.exceptions;
 
 import com.estudojava.course.services.exceptions.DatabaseException;
+
 import com.estudojava.course.services.exceptions.ResourceNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -30,5 +31,7 @@ public class ResourceExceptionHandler {
         return ResponseEntity.status(status).body(err);
 
     }
+
+
 
 }
